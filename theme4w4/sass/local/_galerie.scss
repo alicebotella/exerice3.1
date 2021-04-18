@@ -1,7 +1,30 @@
 .galerie {
     display: flex;
     flex-wrap: wrap;
+    
     article {
         margin: 2%;
+    }
+    .galerie_info {
+        display: none;
+    }
+
+    article:hover {
+        margin-bottom: -2%;
+
+        .galerie_info{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        a {
+            background-color: rgba(0, 0, 0, 0.555);
+
+            img {
+                background-color: rgba(0, 0, 0, 0.555);
+            }
+        }
+        
     }
 }

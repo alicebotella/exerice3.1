@@ -1131,6 +1131,10 @@ body.home::after {
   font-size: clamp(0.6rem, -0.875rem + 8.333vw, 3rem);
 }
 
+.page-title {
+  margin-top: 5%;
+}
+
 /* --------------------------------------------------------------------------------------- 
 Liste des blocs de cours par type_de_cours
 ------------------------------------------------------------------------------------------ */
@@ -1159,6 +1163,8 @@ Liste des blocs de cours par type_de_cours
   margin: 1%;
   padding: 1rem;
   text-align: center;
+  background-color: #c1deff;
+  border-radius: 20px;
 }
 
 .home .cours section.bloc article p {
@@ -1170,6 +1176,10 @@ Liste des blocs de cours par type_de_cours
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
+}
+
+.home .cours section.bloc article:hover {
+  background-color: #d8ebff;
 }
 
 @media (min-width: 800px) {
@@ -1239,6 +1249,7 @@ Liste des blocs de cours par type_de_cours
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  border-radius: 20px;
 }
 
 @media (min-width: 800px) {
@@ -1255,15 +1266,23 @@ Liste des blocs de cours par type_de_cours
 .carrousel-2 .slide__conteneur .slide .slide__info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 20%;
+  margin-left: 2%;
 }
 
 .carrousel-2 .slide__conteneur .slide .slide__info p {
   font-size: .8rem;
+  justify-content: center;
+  text-align: center;
 }
 
 .carrousel-2 .slide__conteneur .slide .slide__info a {
   font-size: 1.2rem;
   text-decoration: none;
+  justify-content: center;
+  text-align: center;
 }
 
 .carrousel-2 .slide__conteneur .slide:nth-of-type(1) {
@@ -1436,5 +1455,28 @@ La barre du millieu
 
 .galerie article {
   margin: 2%;
+}
+
+.galerie .galerie_info {
+  display: none;
+}
+
+.galerie article:hover {
+  margin-bottom: -2%;
+}
+
+.galerie article:hover .galerie_info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.galerie article:hover a {
+  background-color: rgba(0, 0, 0, 0.555);
+}
+
+.galerie article:hover a img {
+  background-color: rgba(0, 0, 0, 0.555);
 }
 /*# sourceMappingURL=style.css.map */

@@ -16,8 +16,7 @@
             <?php the_post_thumbnail( 'thumbnail' ); ?>
         </div>
         <div class="flip-card-back">
-            <h1><?php the_title() ?></h1>
-            <p><a href="<?php echo get_permalink() ?>"><?php the_title() ?> </a> </p>
+            <h1> <a href="<?php echo get_permalink() ?>"> <?php the_title() ?></h1>
             <!-- <p>We love that guy</p> -->
         </div>
     </div>

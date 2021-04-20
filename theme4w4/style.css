@@ -1109,24 +1109,6 @@ body.home::after {
   text-align: center;
 }
 
-.site-title {
-  font-family: "Montserrat", monospace;
-  font-weight: bold;
-  font-size: clamp(1rem, -0.875rem + 8.333vw, 3rem);
-  margin-bottom: 0;
-}
-
-.site-title a {
-  text-decoration: none;
-}
-
-.site-description {
-  margin-top: 0;
-  font-family: "Montserrat", monospace;
-  font-weight: normal;
-  font-size: clamp(0.6rem, -0.875rem + 8.333vw, 1.5rem);
-}
-
 .home .entry-header {
   font-size: clamp(0.6rem, -0.875rem + 8.333vw, 3rem);
 }
@@ -1400,6 +1382,7 @@ Le bouton buger
   height: 2rem;
   border-radius: 50%;
   overflow: hidden;
+  background-color: #fff;
 }
 
 #burger div {
@@ -1517,32 +1500,115 @@ La barre du millieu
 .galerie {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  /* article {
+        margin: 2%;
+    }
+    .galerie_info {
+        display: none;
+    }
+
+    article:hover {
+        margin-bottom: -2%;
+
+        .galerie_info{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        a {
+            background-color: rgba(0, 0, 0, 0.555);
+
+            img {
+                background-color: rgba(0, 0, 0, 0.555);
+            }
+        }
+        
+    } */
 }
 
-.galerie article {
+.galerie .flip-card {
   margin: 2%;
+  background-color: transparent;
+  width: 150px;
+  height: 150px;
+  perspective: 1000px;
 }
 
-.galerie .galerie_info {
-  display: none;
+.galerie .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.galerie article:hover {
-  margin-bottom: -2%;
+.galerie .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-.galerie article:hover .galerie_info {
+.galerie .flip-card-front, .galerie .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.galerie .flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.galerie .flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.galerie h1 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
 
-.galerie article:hover a {
-  background-color: rgba(0, 0, 0, 0.555);
+/* local page
+--------------------------------------------- */
+.site-title {
+  font-family: "Montserrat", monospace;
+  font-weight: bold;
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 3rem);
+  margin-bottom: 0;
 }
 
-.galerie article:hover a img {
-  background-color: rgba(0, 0, 0, 0.555);
+.site-title a {
+  text-decoration: none;
+}
+
+.site-description {
+  margin-top: 0;
+  font-family: "Montserrat", monospace;
+  font-weight: normal;
+  font-size: clamp(0.6rem, -0.875rem + 8.333vw, 1.5rem);
+}
+
+.page-header {
+  margin-top: 130px;
+}
+
+.page-header .page-title {
+  font-size: 4rem;
+  color: #af2929;
+  margin-bottom: 0;
+}
+
+.page-header .archive-description {
+  font-size: 1rem;
+  color: #6b767a;
+}
+
+.page-header .archive-description p {
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

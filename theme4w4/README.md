@@ -10,4 +10,4 @@ Dépôt: https://github.com/alicebotella/exercice3
 
 Page gitHub: https://alicebotella.github.io/exercice3/
 
-Page Webdev: https://e1995379.webdev.cmaisonneuve.qc.ca/design/blogtest/
+Page Webdev: https://e1995379.webdev.cmaisonneuve.qc.ca/design/blogtest/wp-content/themes/theme4w4/index.htm
